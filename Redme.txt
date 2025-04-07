@@ -1,0 +1,57 @@
+How to Use: WhatsApp Bulk Image Sender with Python.
+
+Step 1: Prepare Your System
+
+1. Install Python  
+   Download and install Python from [python.org](https://www.python.org/downloads/).
+
+2. Install Required Libraries
+   Open your terminal or command prompt and run:
+   bash
+   pip install pandas pywhatkit openpyxl
+   
+Step 2: Prepare Excel File
+
+1. Create an Excel file (e.g., `Book1.xlsx`).
+2. Add two columns:
+   - `Name` – The contact's name.
+   - `Number` – The phone number (with country code but **no "+"**, e.g., `910000000000`).
+
+📄 Example:
+
+| Name     | Number       |
+|----------|--------------|
+| ABC      | 910000000000 |
+| XYZ      | 910000000000 |
+
+---
+
+Step 3: Add Your Image
+
+- Place the image you want to send in the same folder as the script, or provide the full path.
+- Example image file: `unlock1.jpg`
+
+Step 4: Customize the Script
+
+1. Open the script file.
+2. Set the correct Excel file path and image path in the code:
+   python
+   excel_file_path = 'Book1.xlsx'
+   image_file_path = 'image.jpg'
+   image_caption = 'Check this out! Limited time offer!'
+
+Step 5: Run the Script
+
+In terminal, run the script:
+bash
+python your_script_name.py
+
+- A WhatsApp Web tab will open.
+- Scan the QR code with your phone.
+- The script will send the image to each contact in your Excel file, one by one.
+
+Notes:
+- Keep your WhatsApp logged in and connected.
+- Each message is sent with a **delay** to avoid being flagged.
+- Ensure contacts are saved with valid phone numbers and country codes.
+- Do not use for spamming – this tool is for ethical and business use only.
